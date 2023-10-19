@@ -15,8 +15,11 @@ public class LocatorsDemo {
         driver.manage().window().maximize();
         Thread.sleep(5000);
 
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("silk sarees");
-        driver.findElement(By.id("nav-search-submit-button")).click();
+       // driver.findElement(By.id("twotabsearchtextbox")).sendKeys("silk sarees");
+        //driver.findElement(By.id("nav-search-submit-button")).click();
+
+        driver.findElement(By.linkText("Click here to go to amazon.in")).click();
+        //driver.findElement(By.partialLinkText("Click here to go to amazon.in")).click();
 
     }
 }
