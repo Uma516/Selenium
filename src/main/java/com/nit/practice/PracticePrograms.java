@@ -5,22 +5,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.time.Duration;
+
 public class PracticePrograms {
     public static void main(String[] args) throws InterruptedException {
 
-        ChromeOptions options=new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins");
-        WebDriver driver=new ChromeDriver(options);
-        driver.get("https://www.amazon.com/");
+        WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         Thread.sleep(5000);
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("macbook");
-        driver.findElement(By.id("nav-search-submit-button")).click();
-        driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[2]/div[1]/input")).click();
-        driver.findElement(By.id("search")).sendKeys("sarees");
-        driver.findElement(By.xpath("/html/body/div[1]/div[6]/script/text()")).click();
-        driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[3]/div/span/input")).click();
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
+        driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
 
     }
-
 }
