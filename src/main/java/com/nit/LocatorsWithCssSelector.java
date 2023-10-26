@@ -19,15 +19,16 @@ public class LocatorsWithCssSelector {
                 driver.manage().window().maximize();
                 //css tag with id
                 // driver.findElement(By.cssSelector("input#twotabsearchtextbox")).sendKeys("dictionary");
-                // driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("dictionary");
+               // driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("dictionary");
 
                 //tag class
                 // driver.findElement(By.cssSelector("input.nav-input")).sendKeys("dates");
                 //driver.findElement(By.cssSelector(".nav-input")).sendKeys("dates");
-                //tag with attribute
-                driver.findElement(By.cssSelector("input[name='auto']")).sendKeys("toys");
+
+                //tag with attribute(place holder )
+                driver.findElement(By.cssSelector("input[placeholder='Search Amazon']")).sendKeys("toys");
             }
         }
 
-    }
-}
+
+
