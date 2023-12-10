@@ -8,17 +8,16 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class LocatorsWithXpath {
     public static void main(String[] args) {
 
-        ChromeOptions options=new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=+");
-        WebDriver driver=new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://demo.opencart.com/");
         driver.manage().window().maximize();
 
-        String productname= driver.findElement(By.xpath("//a[normalize-space()='MacBook']")).getText();
+        String productname = driver.findElement(By.xpath("//a[normalize-space()='MacBook']")).getText();
 
         //String productname=driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[2]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[1]/h4[1]/a[1]")).getText();
 
         System.out.println(productname);
-
     }
 }

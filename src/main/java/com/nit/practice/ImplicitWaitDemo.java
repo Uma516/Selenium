@@ -7,7 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-public class ImplicitWaitDemo {
+public class
+ImplicitWaitDemo {
 
     public static void main(String[] args) {
 
@@ -24,8 +25,11 @@ public class ImplicitWaitDemo {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        // driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
 
-      driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+       driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
        driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
        driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")).click();
+
+
+
     }
 }
